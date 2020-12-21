@@ -18,8 +18,10 @@ app.use('',express.static('public'));
 app.use(express.json());
 
  
+var url = 'mongodb+srv://bhargav:qyZLYgamNP7IoikS@cluster0.hyx8f.mongodb.net/test1?retryWrites=true&w=majority';
+ 
 mongoose.connect(
-  process.env.MONGODB_CONNECTION_STRING,
+ url,
 {
   useNewUrlParser: true,
   useUnifiedTopology: true,
